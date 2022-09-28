@@ -1,0 +1,45 @@
+The \ttbar production events are simulated using Monte Carlo (MC) programs.
+The \ttbar is simulated using quantum chromodynamics (QCD) at next-to-leading-order (NLO) precision through the matrix element (ME) in the \POWHEG 2.0 event generator~\cite{Sim:powheg1, Sim:powheg2, Sim:powheg3, Sim:powheg4}.
+The value of the top quark mass (\Mt) is set to 172.5\GeV.
+The \POWHEG output is combined with the parton shower (PS) simulation of \PYTHIA 8.205~\cite{Sim:pythia2}, with the underlying-event (UE) tune CP5~\cite{Sim:CP5}.
+The parton distribution functions (PDFs) NNPDF 3.1~\cite{Sim:NNPDF3.1} at next-to-NLO order (NNLO) are used to model the data.
+Samples of \ttbar with different values of CEDM are simulated with the \MADGRAPH generator~\cite{Sim:madgraph} at leading-order (LO) precision interfaced with \PYTHIA.
+These samples are used as a cross-check of the model dependency of each CP observable.
+
+Several backgrounds are considered with single top quark production being the leading contribution.
+This is simulated at NLO using \MADGRAPH 2.4.2 with the FxFx matching scheme~\cite{Sim:FXFX} for $s$-channel production and \POWHEG for $t$-channel and $\PQt\PW$ production.
+All samples are interfaced with \PYTHIA through the UE tune CUETP8M1~\cite{Sim:CUETP8M1} for $t$-channel production for the 2016 data and CP5 for the rest.
+Diboson ($\PV\PV$), \Wjets, Drell--Yan (DY), and QCD multijet productions are simulated at LO using the \MADGRAPH 2.4.4 generator.
+They are then interfaced with \PYTHIA using the MLM matching scheme~\cite{Sim:MLMmatching}.
+Events coming from the decay of \ttbar into either dilepton+jets or hadronic multijets can be incorrectly included in the signal event sample due to particle misidentification.
+They are considered as a background.
+The background from \PW boson events with heavy-flavor quarks (\WHF), which is not a large background, is important during the estimation of the systematic uncertainties, and will be discussed in detail in Section~\ref{sec:uncertainty}.
+List of all the simulated samples with various hard process used in this analysis can be found in Tables~\ref{tab:mc_list_16},~\ref{tab:mc_list_17}, and~\ref{tab:mc_list_18}.
+
+The simulation of the experimental apparatus is based on \GEANTfour~\cite{Sim:geant4}.
+To model the effect of additional \pp interactions within the same or nearby bunch crossings (pileup), simulated minimum-bias interactions are included in the simulated samples~\cite{Sim:pileup}.
+The number of pileup interactions in the simulation is reweighted to match the distribution in data.
+\begin{table}[H]
+    \caption{List of 2016 simulated samples used in this analysis}
+    \label{tab:mc_list_16}
+    \centering
+    \resizebox{\textwidth}{!}{
+        \input{tex/data/table/mc16.tex}
+    }
+\end{table}
+\begin{table}[H]
+    \caption{List of 2017 simulated samples used in this analysis}
+    \label{tab:mc_list_17}
+    \centering
+    \resizebox{\textwidth}{!}{
+        \input{tex/data/table/mc17.tex}
+    }
+\end{table}
+\begin{table}[H]
+    \caption{List of 2018 simulated samples used in this analysis}
+    \label{tab:mc_list_18}
+    \centering
+    \resizebox{\textwidth}{!}{
+        \input{tex/data/table/mc18.tex}
+    }
+\end{table}

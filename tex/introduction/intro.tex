@@ -1,0 +1,47 @@
+The standard model (SM) of particle physics predicts the violation of the combined charge conjugation and parity (CP) symmetry that originates from a complex phase in the Cabibbo--Kobayashi--Maskawa matrix~\cite{CPVtop:CKMmatrix1973,CPVtop:CKMmatrix}.
+Measurements of CP violation (CPV) in the strange (\PQs), bottom (\PQb), and charm (\PQc) quark sectors conducted over the past few decades~\cite{NA48:1999szy,CPVtop:Bfactories,Pajero:2020dum} have been found to be consistent with the SM expectations.
+However, the level of CPV in the SM is insufficient to accommodate the observed matter-antimatter asymmetry in the universe~\cite{CPVtop:RevParticlePhy}, motivating searches for sources of CPV beyond the SM (BSM).
+In contrast to the \PQs, \PQc, and \PQb quark sectors, CPV in the top (\PQt) quark sector is relatively unexplored.
+In the SM, the CPV effects in top quark pair (\ttbar) decays are expected to be small due to the large mass of the top quark in comparison with the other quarks, leading to the Glashow--Iliopoulos--Maiani cancellation~\cite{Glashow:1970gm}.
+Thus, any observed CP-violating asymmetry would indicate the presence of BSM phenomena~\cite{CPVtop:CPVinTOP}.
+For example, a nonzero chromoelectric dipole moment (CEDM) of the top quark~\cite{CPVtop:8TeVRef,CPVtop:13TeVRef,CPVtop:Tevatron,CPVtop:CPVsource} can generate sizable CPV in the production of \ttbar.
+Previous studies performed by CMS in data from \pp collisions at \oldTeV~\cite{CPVtop:CMSresult} found the CP-violating asymmetries (\Acp) in the \ttbar lepton+jets channel to be consistent with the SM prediction.
+
+This paper presents the results of new searches by the CMS Collaboration for CP-violating asymmetries in \ttbar events using the lepton+jets channel from \pp collisions produced at the LHC.
+A possible source of CPV at the top quark production and decay vertices arises from BSM interactions through the CEDM of the top quark.
+In a model with contributions from a CEDM~\cite{CPVtop:13TeVRef}, the magnetic and electric couplings between top quarks and gluons (\Pg) are conventionally written as
+\begin{linenomath}\begin{equation}\label{eq:lagrangian}
+    \mathcal{L}=\frac{\SCC}{2}\PAQt\SUTG\sigmn(\CMDM+i\gamma_5\dtg)\PQt\GFST,
+\end{equation}\end{linenomath}
+where \SCC and \GFST are the strong coupling constant and the gluon field strength tensor, respectively; \PQt and \PAQt are the wavefunctions of the top quark and antiquark; \SUTG are $SU(3)$ generators; \sigmn is defined by the operator $\frac{i}{2}[\gamma^\mu, \gamma^\nu]$; \CMDM refers to the parameter of the chromomagnetic dipole moment; and \dtg is the CP-odd CEDM.
+From Ref.~\cite{CPVtop:13TeVRef}, \dtg can be converted into a dimensionless CEDM parameter \dtG as
+\begin{linenomath}\begin{equation}\label{eq:cedm_conversion}
+    \dtg = \frac{\sqrt{2}v}{\Lambda^2}\text{Im}(\dtG),
+\end{equation}\end{linenomath}
+where $\Lambda$ is a high-mass scale of the BSM phenomena and $v$ is the vacuum expectation value for the Higgs boson field ($v \approx 246\GeV$).
+Higher \dtG values are expected to yield larger \Acp contributions.
+
+In the lepton+jets channel, one of the top quarks is presumed to decay into a bottom quark and a \PW boson that subsequently decays into quark pairs (\qqbar).
+The other top quark is required to decay into a bottom quark and a \PW boson that decays leptonically into an electron or muon and its associated neutrino.
+We will refer to this as the leptonically decaying top quark.
+The analysis exploits four T-odd observables, where T is the time-reversal operator, as proposed in Ref.~\cite{CPVtop:13TeVRef}.
+The CP observables are chosen to come from reconstructable final-state objects that can be well measured.
+For example, some observables have been discarded because they need the momentum of the leptonically decaying top quark, which is not experimentally measured.
+The CP observables take the form $\vec{v_1} \cdot (\vec{v_2}\times\vec{v_3})$, where $\vec{v_i}$ are spin or momentum vectors and $i=1\text{--}3$~\cite{CPVtop:8TeVRef,CPVtop:13TeVRef,CPVtop:Tevatron}.
+These triple-product observables are odd under CP transformation if CPT is conserved.
+The four CP observables measured in this analysis are defined as
+\begin{linenomath}\begin{equation}\begin{aligned}
+    \Othree &= \Qell\epsilon(\momB,\,\momAB,\,\momL,\,\momJ) \propto \Qell\vecB^\ast\cdot(\vecL^\ast\times\vecJ^\ast),\\
+    \Osix &= \Qell\epsilon(P,\,\momB-\momAB,\,\momL,\,\momJ) \propto
+    \Qell(\vecB-\vecAB) \cdot (\vecL\times\vecJ),\\
+    \Otwelve &= q\cdot (\momB-\momAB)\epsilon(P,\,q,\,\momB,\,\momAB) \propto (\vecB-\vecAB)_z \cdot (\vecB\times\vecAB)_z,\\
+    \Ofourteen &= \epsilon(P,\,\momB+\momAB,\,\momL,\,\momJ) \propto (\vecB+\vecAB)\cdot(\vecL\times\vecJ).
+\end{aligned}\end{equation}\end{linenomath}
+The symbol $\propto$ indicates that the CP observable is proportional to the triple product; the asterisk symbol represents the quantity measured in the center-of-mass frame of the $\bbbar$ pair, where \PAQb indicates the \PQb antiquark; $\epsilon(a,b,c,d) \equiv \epsLC a^\mu b^\nu c^\alpha d^\beta$, where \epsLC is the Levi--Civita tensor; $P$ and $q$ are the sum and difference of the four-momenta of the protons in the \pp collision, respectively; \momB and \momAB refer to the two \PQb jet momenta, where the \PQb jet definition will be given below; \momL is the momentum of the lepton (\Pell) that originates from the \PW boson decay; \momJ refers to the momentum of the highest transverse momentum (\pt) jet from the hadronically decaying \PW boson; \Qell is the charge of the lepton; and the $z$ subscript indicates a projection along the beam axis in the CMS coordinate system.
+
+The tabulated results are provided in the HEPData record for this analysis~\cite{hepdata}.
+The paper is organized as follows.
+Section~\ref{sec:detector} introduces the basic features of the CMS detector.
+Section~\ref{sec:selection} provide information on the data, simulations, and selection criteria.
+Sections~\ref{sec:fitresult} and~\ref{sec:uncertainty} describe the fitting procedures, the instrumental effects, and the resulting systematic uncertainties.
+The final results are presented in Section~\ref{sec:results}, with a brief summary given in Section~\ref{sec:summary}.

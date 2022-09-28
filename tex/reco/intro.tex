@@ -1,0 +1,17 @@
+The physical objects of interest from the raw digital respons can be reconstructed through the computing process called the particle-flow (PF) algorithm.
+The PF algorithm aims to reconstruct and idenrtify stable particles, such as muons, electrons, photon, charged hadrons and neutral hadrons from collision, where ingredients are created from individual subdetector responses, as shown in Fig.~\ref{fig:reco_pf}.
+\begin{figure}[H]\centering
+    \includegraphics[width=0.95\textwidth]{figure/reco_pf.pdf}
+    \caption{Schematic view of a generic barrel RPC with 2 roll partitions.}
+    \label{fig:reco_pf}
+\end{figure}
+
+These ingredients are joined together with a link algorithm through the expected signatures of particles.
+The vertices, tracks and showers are connected with the link algorithm and are identified to some stable particles.
+The energy and propagation direction of each stable particle can also be determined.
+The corresponding gredients are masked from the list during the following reconstruction, once the target stable particles are reconstructed.
+The PF algorithm follows a reconstruction procedure ordered by the level of significant features.
+The muon reconstruction is identifed as the top priority, then the isolated photons and electrons, and finally the rest of the non-isolated photon, charged and neutral hadrons.
+Bunches of PF candidates are also packed together as jet to represent the short-lived particles that never reach the detector components directly, and particle-based physical objects such as jets missing transverse energy.
+This chapter will give an overview of the particle-flow algorithm, focusing on what quantities are especially important to this analysis.
+

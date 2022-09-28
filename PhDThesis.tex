@@ -1,0 +1,186 @@
+\documentclass[10pt,a4paper,twoside]{report}
+\usepackage[right=1.25in, left=1.25in, bottom=3.5cm, top=3.5cm, ,twoside]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%% Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+%\fancyhead[RE]{\slshape\nouppercase{\leftmark}}
+%\fancyhead[LO]{\slshape\nouppercase{\rightmark}}
+\fancyhead[CE]{\nouppercase{\leftmark}}
+\fancyhead[CO]{\nouppercase{\rightmark}}
+%two side page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%Line space %%%%%%%%%%%
+\usepackage{setspace, caption}
+\renewcommand{\arraystretch}{1.2}
+\setstretch{1.3}
+\captionsetup[table]{font={stretch=1.2}}
+\captionsetup[figure]{font={stretch=1.2}}
+
+%%%%%%%%%%%%%%% Font %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts to typeset mathematics to match Palatino
+\usepackage{mathpazo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Hyper link %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks =true,
+    %linkcolor  =blue,
+    linkcolor  =black,
+    filecolor  =magenta,
+    citecolor  =blue,
+    urlcolor   =blue,
+    pdftitle   ={PhDThesis},
+    pdfauthor  ={Pu Sheng Chen}
+%    pdfpagemode=FullScreen,
+    }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pdfpages}
+
+
+%%%%%%%%%%%%%%% Empty %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{afterpage}
+\newcommand\emplypage{%
+    \newpage
+    \thispagestyle{plain} % empty
+    \mbox{}
+    }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%% Math %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{isomath}
+\usepackage{esvect}
+\usepackage{slashed}
+\usepackage{mathtools}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Special symbol %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pifont}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% table
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{tablefootnote}
+\usepackage{lscape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table footnote %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem, booktabs}
+\usepackage[referable]{threeparttablex}
+\renewlist{tablenotes}{enumerate}{1}
+\makeatletter
+\setlist[tablenotes]{label=\tnote{\alph*},
+                     ref  =\alph*,
+                    itemsep=\z@,
+                    topsep=\z@skip,
+                    partopsep=\z@skip,
+                    parsep=\z@,
+                    itemindent=\z@,
+                    labelindent=\tabcolsep,
+                    labelsep=.2em,
+                    leftmargin=*,
+                    align=left,
+                    before={\footnotesize}}
+\makeatother
+
+%%%%%%%%%%%%%%% Line number %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lineno}
+%\linenumbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+%align plots
+\usepackage{blindtext}
+%\usepackage{showframe}
+
+%%%%%%%%%%%%%%%%% Plot %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{subfigure}
+\usepackage{sidecap} % side caption
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% Reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{biblatex}
+\addbibresource{PhDThesis.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sty/hepparticles}
+\usepackage{sty/heppennames2}
+\usepackage{sty/ptdr-definitions}
+
+\begin{document}
+
+\tableofcontents
+\raggedbottom
+\listoffigures
+\listoftables
+
+\chapter{Introduction}
+    \input{tex/introduction/intro.tex}
+\chapter{Experimental Apparatus}\label{sec:detector}
+    \input{tex/detector/intro.tex}
+    \section{Large hadron collider}
+    \input{tex/detector/lhc.tex}
+    \section{Compact muon solenoid}
+    \input{tex/detector/cms.tex}
+    \section{Trigger}
+    \input{tex/detector/trigger.tex}
+\chapter{Physical object reconstruction}\label{sec:selection}
+    \input{tex/reco/intro.tex}
+    \section{Particle flow ingredients}
+    \input{tex/reco/pf.tex}
+    \section{Muon}
+    \input{tex/reco/muon.tex}
+    \section{Electron}
+    \input{tex/reco/electron.tex}
+    \section{Jet}
+    \input{tex/reco/jet.tex}
+\chapter{Data and simulated samples}
+    \section{Data samples}
+    \input{tex/data/data.tex}
+    \section{Simulated samples}
+    \input{tex/data/mc.tex}
+    \section{Corrections to simulation}
+    \input{tex/data/sf.tex}
+\chapter{Event selection}
+    \section{Trigger}
+    \input{tex/select/trigger.tex}
+    \section{Physical object selection}
+    \input{tex/select/event.tex}
+\chapter{Asymmetries extraction}\label{sec:fitresult}
+    \section{Fitting procedure}
+    \input{tex/asymmetry/fit.tex}
+    \section{Experimental sensitivity}
+    \input{tex/asymmetry/dilution.tex}
+\chapter{Systematic uncertainties}\label{sec:uncertainty}
+    \input{tex/systematic/intro.tex}
+    \section{Detector and reconstruction effects}
+    \input{tex/systematic/bias.tex}
+    \section{Other experimental and theoretical systematic uncertainties}
+    \input{tex/systematic/syst.tex}
+\chapter{Results}\label{sec:results}
+    \section{Asymmetry measurements}
+    \input{tex/results/acp.tex}
+    \section{Constraint on the dimensionless CEDM}
+    \input{tex/results/cedm.tex}
+\chapter{Conclusion}\label{sec:summary}
+    \input{tex/conclusion/summary.tex}
+\clearpage
+
+\appendix
+\chapter{Electron trigger study}\label{appendix:trigger}
+    \input{tex/appendix/trigger.tex}
+\chapter{Dilution factors}\label{appendix:df}
+    \input{tex/appendix/df.tex}
+
+\printbibliography[heading=bibintoc]
+\end{document}

@@ -1,0 +1,201 @@
+There are two types of experimental factors that will affect the measurements of the asymmetries: (1) The reconstructed objects are mis-tagged such as fake lepton, and (2) The reconstructed objects are correctly matched, however, the charges are mis-identified such as b- and \PAQb- jet.
+This effect is so-called the dilution effect, since it will dilute the measured asymmetries. 
+Moreover, this effect can be parametrized with a dilution factor $D$, and can be derived using \ttbar simulated samples.
+
+With \ttbar simulated samples, we can define three types of rates, the correctly matched type ($\epsilon_{cor}$), the mis-tagged type ($\epsilon_{tag}$), and the mis-identified type ($\epsilon_{ide}$) and should follow the relations
+
+\begin{equation}\label{eq:epsilon_sum}
+    \epsilon_{cor} + \epsilon_{tag} + \epsilon_{ide} = 1
+\end{equation}
+
+The intrinsic and measured asymmetries can then be demonstrated as following, the left plot is for the intrinsic $O_{i}$ distribution and on the other hand, the right plot is for the measured $O_{i}$ distribution after measured.
+
+\begin{center}
+%\unitlength=1mm
+    %\begin{picture}(100,100)
+    \begin{picture}(325,100)
+        % before
+        \thicklines
+        \put(10,0){\vector(0,1){80}} % y-axis
+        \put(10,0){\vector(1,0){90}} % x-axis
+        \put(51,-3){\line(0,1){68}}   % line |
+        \put(93,0){\line(0,1){65}}   % line |
+        \put(51,65){\line(1,0){41}}  % line -
+        \put(10,50){\line(1,0){41}}   % line -
+        \put(10,15){\line(1,0){82}}   % line -
+        % dash
+        \multiput(-5,0)(2,0){59}{\line(1,0){1}}  % dash -
+        \multiput(-5,15)(2,0){59}{\line(1,0){1}} % dash -
+        \multiput(-5,30)(2,0){28}{\line(1,0){1}} % dash -
+        \multiput(-5,50)(2,0){20}{\line(1,0){1}} % dash -
+        \multiput(51,35)(2,0){31}{\line(1,0){1}}  % dash -
+        \multiput(51,65)(2,0){31}{\line(1,0){1}}  % dash -
+        \put(103,0){\vector(0,1){65}} 
+        \put(4,0){\vector(0,1){50}}
+        \put(-5,55) {\small $N_{-}^{*}$}
+        \put(97,70) {\small $N_{+}^{*}$}
+        \put(-20,36){\color{green}{\small $N_{-}^{c}$}}
+        \put(112,45){\color{green}{\small $N_{+}^{c}$}}
+        \put(-20,19){\color{red}      {\small $N_{-}^{i}$}}
+        \put(112,21){\color{red}      {\small $N_{+}^{i}$}}
+        \put(-20,2) {\color{blue}     {\small $N_{-}^{t}$}}
+        \put(112,2) {\color{blue}     {\small $N_{+}^{t}$}}
+        \put(-5,85){$Events$}
+        \put(15,-10){\small $O_{i}<0$}
+        \put(56,-10){\small $O_{i}>0$}
+        
+        %dash box
+        \multiput(12,19)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(12,23)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(12,27)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(53,19)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(53,23)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(53,27)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(53,31)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        
+        %dash box
+        \multiput(12,4) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(12,8) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(12,12)(4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(53,4) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(53,8) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(53,12)(4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        
+        %dash box
+        \multiput(12,34)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(12,38)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(12,42)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(12,46)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,38)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,42)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,46)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,50)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,54)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,58)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(53,62)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        
+        % after ~150 
+        \put(140,35) {\scriptsize Measurement}
+        \put(138,30){\vector(1,0){50}}
+        % after ~150
+        
+        \thicklines
+        \put(230,0){\vector(0,1){80}} % y-axis
+        \put(230,0){\vector(1,0){90}} % x-axis
+        \put(271,-3){\line(0,1){63}}  % line |
+        \put(312,0){\line(0,1){60}}   % line |
+        \put(230,15){\line(1,0){82}}  % line -
+        \put(230,55){\line(1,0){41}}  % line -
+        \put(271,60){\line(1,0){41}}  % line -
+        % dash
+        \multiput(215,0)(2,0){59}{\line(1,0){1}}  % dash -
+        \multiput(215,15)(2,0){59}{\line(1,0){1}} % dash -
+        \multiput(215,35)(2,0){28}{\line(1,0){1}} % dash -
+        \multiput(215,55)(2,0){28}{\line(1,0){1}} % dash -
+        \multiput(271,30)(2,0){31}{\line(1,0){1}} % dash -
+        \multiput(271,60)(2,0){31}{\line(1,0){1}} % dash -
+        \put(323,0){\vector(0,1){60}}
+        \put(224,0){\vector(0,1){55}}
+        \put(215,60){\small $N_{-}^\prime$}
+        \put(317,65){\small $N_{+}^\prime$}
+        \put(200,40){\color{green}{\small $N_{-}^{c}$}}
+        \put(332,40){\color{green}{\small $N_{+}^{c}$}}
+        \put(332,21){\color{red}      {\small $N_{-}^{i}$}}
+        \put(200,23){\color{red}      {\small $N_{+}^{i}$}}
+        \put(200,2) {\color{blue}     {\small $N_{-}^{t}$}}
+        \put(332,2) {\color{blue}     {\small $N_{+}^{t}$}}
+        \put(215,85){$Events$}
+        \put(235,-10){\small $O_{i}<0$}
+        \put(276,-10){\small $O_{i}>0$}
+        
+        %dash box
+        \multiput(232,4) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(232,8) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(232,12)(4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(273,4) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(273,8) (4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        \multiput(273,12)(4,0){10}{\color{blue}{\line(1,0){1}}} % dash -
+        
+        %dash box
+        \multiput(232,19)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(232,23)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(232,27)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(232,31)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(273,19)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(273,23)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        \multiput(273,27)(4,0){10}{\color{red}{\line(1,0){1}}} % dash -
+        
+        %dash box
+        \multiput(232,39)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(232,43)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(232,47)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(232,51)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,35)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,39)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,43)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,47)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,51)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,55)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+        \multiput(273,55)(4,0){10}{\color{green}{\line(1,0){1}}} % dash -
+    \end{picture}
+\end{center}
+
+where $N^{*}_{-(+)}$ is the intrinsic number of negative (positive) events under $O_{i}$ distribution; $N^{\prime}_{-(+)}$ is the effective number of negative (positive) events under $O_{i}$ distribution; $N^{c}_{-(+)}$ is the number of negative (positive) events correctly matched; $N^{i}_{-(+)}$ is the number of negative (positive) mis-identified events; $N^{t}_{-(+)}$ is the number of negative (positive) mis-tagged events. By definition, $N^{i}_{-(+)}$ will be swapped after measured.
+
+The total number of events $N$ should be the same before and after the measurement, that is 
+
+\begin{equation}\label{eq:total_number}
+    N^{*}_{-} + N^{*}_{+} = N^{\prime}_{-} + N^{\prime}_{+} = N
+\end{equation}
+
+And when it comes to the true asymmetries ($A_{CP}$), we are only interested in the correctly matched type and the mis-identified type before swapped.
+Therefore, the true events $N_-$ and $N_+$ will under the condition
+
+\begin{align}\label{eq:true_total_number}
+    & N_- = N^c_- + N^i_- \\
+    & N_+ = N^c_+ + N^i_+ 
+\end{align}
+
+It is also easy to demonstrate that, if considering Eq.~\ref{eq:epsilon_sum},~\ref{eq:total_number} and~\ref{eq:true_total_number}, the total true events are simply total events subtracting with the events of mis-tagged type , i.e.
+
+\begin{equation}\label{eq:true_denominator}
+    N_- + N_+ = (\epsilon_{cor} + \epsilon_{ide} ) N = (1 - \epsilon_{tag}) N 
+\end{equation}
+
+Physically speaking, events of mis-tagged type should equally contribute to the positive and negative bins, and thus the values of $N^{t}_{-}$ and $N^{t}_{+}$ are the same in the plots and will follow the relation
+
+\begin{equation}\label{eq:mistag_number}
+    N^{t}_{-} = N^{t}_{+} = \frac{\epsilon_{tag}}{2} N
+\end{equation}
+
+Combining Eq.~\ref{eq:true_total_number},~\ref{eq:mistag_number}, $N^{\prime}_{-}$ and $N^{\prime}_{+}$ can be written as 
+
+\begin{align}\label{eq:effective_number}
+    & N^\prime_- = N^c_- + N^i_+ + N^t_- = \frac{\epsilon_{cor}}{\epsilon_{cor}+\epsilon_{ide}} N_- + \frac{\epsilon_{ide}}{\epsilon_{cor}+\epsilon_{ide}} N_+ + \frac{\epsilon_{tag}}{2} N \\
+    & N^\prime_+ = N^c_+ + N^i_- + N^t_+ = \frac{\epsilon_{cor}}{\epsilon_{cor}+\epsilon_{ide}} N_+ + \frac{\epsilon_{ide}}{\epsilon_{cor}+\epsilon_{ide}} N_- + \frac{\epsilon_{tag}}{2} N
+\end{align}
+
+And then we can get 
+\begin{equation}\label{eq:effective_numerator}
+    N^\prime_+ - N^\prime_- = \left( \frac{\epsilon_{cor} - \epsilon_{ide} }{ \epsilon_{cor} + \epsilon_{ide} } \right) (N_+ - N_-)
+\end{equation}
+
+In this case, we can insert Eq.~\ref{eq:total_number} and Eq.~\ref{eq:true_denominator} in and rewrite Eq.~\ref{eq:counting_method}
+
+\begin{align}\label{eq:acp_realtion}
+    A^\prime_{CP} &= \frac{ N^\prime_+ - N^\prime_- }{ N^\prime_+ + N^\prime_- } \\
+                  &= \frac{1}{ N^\prime_+ + N^\prime_- }  \left( \frac{\epsilon_{cor} - \epsilon_{ide} }{ \epsilon_{cor} + \epsilon_{ide} } \right) (N_+ - N_-) \\
+                  &= \frac{1}{ N } \left( \frac{\epsilon_{cor} - \epsilon_{ide} }{ \epsilon_{cor} + \epsilon_{ide} } \right) (N_+ - N_-) \\
+                  &= ( \epsilon_{cor} - \epsilon_{ide} )  \frac{ N_+ - N_- }{ N_+ + N_- } \\
+                  &= D A_{CP}
+\end{align}
+
+Therefore, we can get the conclusion that the uncorrected asymmetries ($A^\prime_{CP}$) are related to the pure asymmetries ($A_{CP}$) values through dilution factors, applied as a multiplicative correction. 
+And the dilution factor itself can be derived from the rate of the corrected matched type and mis-identified type using \ttbar simulated samples.
+Given that there is no events of mis-tagged type, which can be achieved using MC truth study, we can get the dilution factor simply by the rate of the mis-identified type, i.e.
+
+\begin{align}\label{eq:dilution_wrong_sign}
+    D &= \epsilon_{cor} - \epsilon_{inv}
+      &= ( 1 -  \epsilon_{inv} ) -  \epsilon_{inv}
+      &= 1 - 2\epsilon_{inv} 
+\end{align}

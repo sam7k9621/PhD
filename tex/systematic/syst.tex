@@ -1,0 +1,130 @@
+In order to avoid bias from a single estimation of a systematic uncertainty, pseudo-experiments are employed instead.
+For each systematic change, a reference histogram is created using a nominal signal template.
+Four thousand sets of pseudo-data are sampled from the reference histogram and fitted with the nominal (varied) signal and background templates to get the nominal (varied) fitted signal yields.
+The \Acpprime can then be measured using the signal yields in the positive and negative regions of each CP observable.
+The 4000 \Acpprime values for each CP observable are fit to a Gaussian function to obtain a mean and standard deviation.
+The larger of the absolute value of the mean and the standard deviation is then used to estimate the systematic uncertainty from this source.
+The results are summarized in Table~\ref{tab:acp_uncertainties} and described in the following subsections.
+
+\begin{table}[!p]
+    \caption[The sources and values of the systematic uncertainties in \Acpprime for each of the CP observables.]
+    {
+        The sources and values of the systematic uncertainties in \Acpprime for each of the CP observables in percent, averaged over the two lepton-flavor channels.
+        The experimental sources are listed first and then the theoretical ones.
+    }
+    \label{tab:acp_uncertainties}
+    \centering\renewcommand{\arraystretch}{1.1}
+    \newcommand{\TwoRow}[2]{\multirow{2}{*}{\shortstack{#1\\\\ #2}}}
+    \newcommand{\OneRow}[1]{\multirow{2}{*}{#1}}
+    \begin{tabular}{ccccc}
+        Systematic sources & \multicolumn{4}{c}{\Acpprime (\%)} \\[-3pt]
+        & \Othree & \Osix & \Otwelve & \Ofourteen\\
+        \hline
+        \OneRow{Pileup} & \TwoRow{$-0.0008$}{$+0.0010$} & \TwoRow{$-0.0003$}{$+0.0007$} & \TwoRow{$+0.0023$}{$-0.0017$} & \TwoRow{$+0.0040$}{$-0.0044$}\\\\
+        \OneRow{\PQb tagging (\PQb, \PQc)} & \TwoRow{$+0.0002$}{$-0.0002$} & \TwoRow{$+0.0001$}{$-0.0003$} & \TwoRow{${<}0.0001$}{${<}0.0001$} & \TwoRow{${<}0.0001$}{$-0.0002$}\\\\
+        \OneRow{\PQb tagging (\PQu, \PQs, \PQd, \PQt, \Pg)} & \TwoRow{$-0.0003$}{$+0.0004$} & \TwoRow{$-0.0003$}{${<}0.0001$} & \TwoRow{$-0.0009$}{$+0.0007$} & \TwoRow{$-0.0007$}{$+0.0005$}\\\\ 
+        \OneRow{Lepton efficiencies} & \TwoRow{$-0.0002$}{$+0.0002$} & \TwoRow{$-0.0001$}{$-0.0001$} & \TwoRow{$-0.0001$}{${<}0.0001$} & \TwoRow{$-0.0004$}{$+0.0001$}\\\\
+        \OneRow{Jet energy resolution} & \TwoRow{$-0.0028$}{$-0.0029$} & \TwoRow{$-0.0069$}{$+0.0032$} & \TwoRow{$-0.0024$}{$-0.0021$} & \TwoRow{$-0.0070$}{$+0.0026$}\\\\
+        \OneRow{Jet energy scale} & \TwoRow{$-0.0051$}{$-0.0018$} & \TwoRow{$-0.0046$}{$+0.0065$} & \TwoRow{$-0.0046$}{$+0.0011$} & \TwoRow{$-0.0062$}{$+0.0041$}\\\\
+        \OneRow{Background template} & \OneRow{$+0.0061$} & \OneRow{$+0.0050$} & \OneRow{$+0.0139$} & \OneRow{$+0.0016$}\\\\
+        \OneRow{PDF} & \TwoRow{$+0.0008$}{$-0.0008$} & \TwoRow{$-0.0008$}{$+0.0006$} & \TwoRow{$+0.0003$}{$-0.0004$} & \TwoRow{$+0.0003$}{$-0.0006$}\\\\
+        \OneRow{$\mu_R$ and $\mu_F$} & \TwoRow{$+0.0008$}{$+0.0012$} & \TwoRow{$+0.0008$}{$-0.0002$} & \TwoRow{$+0.0013$}{$-0.0033$} & \TwoRow{$+0.0007$}{$-0.0004$}\\\\
+        \OneRow{ISR} & \TwoRow{$+0.0006$}{$-0.0004$} & \TwoRow{$-0.0005$}{$+0.0004$} & \TwoRow{$+0.0017$}{$-0.0015$} & \TwoRow{$+0.0024$}{$-0.0021$}\\\\
+        \OneRow{FSR} & \TwoRow{$-0.0001$}{$-0.0008$} & \TwoRow{$-0.0215$}{$+0.0122$} & \TwoRow{$+0.0053$}{$-0.0017$} & \TwoRow{$-0.0129$}{$+0.0060$}\\\\
+        \OneRow{Color reconnection} & \TwoRow{$-0.0162$}{${<}0.0001$} & \TwoRow{$+0.0186$}{$-0.0206$} & \TwoRow{$+0.0091$}{$-0.0464$} & \TwoRow{$+0.0384$}{$+0.0304$}\\\\
+        \OneRow{ME-PS matching} & \TwoRow{$-0.0235$}{$+0.0399$} & \TwoRow{$-0.0043$}{$+0.0177$} & \TwoRow{$-0.0185$}{$+0.0139$} & \TwoRow{$+0.0352$}{$+0.0376$}\\\\
+        \OneRow{Underlying event} & \TwoRow{$-0.0515$}{$-0.0099$} & \TwoRow{$-0.0576$}{$+0.0355$} & \TwoRow{$-0.0082$}{$+0.0218$} & \TwoRow{$+0.0116$}{$+0.0424$}\\\\ 
+        \OneRow{Flavor response} & \TwoRow{$-0.0017$}{$-0.0024$} & \TwoRow{$-0.0007$}{$+0.0024$} & \TwoRow{$-0.0033$}{$-0.0004$} & \TwoRow{$-0.0105$}{$+0.0070$}\\\\
+        \OneRow{Top quark mass} & \TwoRow{$+0.0049$}{$-0.0179$} & \TwoRow{$+0.0152$}{$-0.0118$} & \TwoRow{$+0.0119$}{$-0.0097$} & \TwoRow{$+0.0082$}{$-0.0046$}\\\\
+        \OneRow{Per-event resolution} & \TwoRow{$-0.0027$}{$-0.0004$} & \TwoRow{$-0.0022$}{$+0.0040$} & \TwoRow{$+0.0023$}{$+0.0014$} & \TwoRow{$-0.0005$}{$+0.0048$}\\\\
+        \OneRow{\WHF fraction} & \OneRow{$-0.0174$} & \OneRow{$-0.0132$} & \OneRow{$-0.0102$} & \OneRow{$-0.0098$}\\\\
+        \OneRow{No \PQt \PT reweighting} & \OneRow{$-0.0008$} & \OneRow{$-0.0005$} & \OneRow{${<}0.0001$} & \OneRow{${<}0.0001$}
+    \end{tabular}
+\end{table}
+
+\subsection{Other experimental systematic uncertainties}
+\subsubsection{Pileup}
+During the MC simulation, it manually inserts number of interactions which might be slightly different from the actual number during the data collection at CMS.
+The \Pp\Pp~collision minimum bias cross section value 69.2\unit{mb} with a $\pm5\%$ uncertainty, is used.
+The systematic uncertainty due to the modeling of pileup is estimated by shifting the total inelastic cross section up and down by 4.6\%~\cite{Sim:pileup}.
+The contribution to the overall uncertainty in \Acpprime is less than 0.005\%.
+
+\subsubsection{\texorpdfstring{\PQb}{} tagging}
+To account for the fact that the \PQb~tagging algorithm has different efficiencies and misidentification probabilities in data and simulated process, per-jet scale factors need to be applied according to the jet's \PT and $\abs{\eta}$.
+To assess the uncertainty coming from the \PQb tagging scale factors, the factors are varied according to their uncertainties.
+The effect of changing the heavy-flavor quark (\PQb and \PQc), and light-flavor quark and gluon (\PQu, \PQd, \PQs, and \Pg) scale factors, are calculated separately.
+The two variations are combined in quadrature to give the total \PQb tagging uncertainty, which contributes $<$0.001\% to the final \Acpprime measurements.
+
+\subsubsection{Lepton reconstruction}
+The uncertainties from lepton identification, isolation, and trigger efficiencies are determined by changing the scale factors according to their uncertainties.
+Among the sources of experimental uncertainty, those associated with these sources have the smallest values, with a contribution of $<$0.0005\% to the total systematic uncertainty.
+
+\subsubsection{Jet energy correction}
+The jet energy scale (JES) and jet energy resolution are changed according to their {\PT}- and $\eta$-dependent uncertainties~\cite{CMS:2016lmd}.
+Both impact the \Mlb distribution and contribute $<$0.007\% uncertainties to the final results.
+
+\subsubsection{Background template}
+In this paper, a background template derived from the background-enriched events in data is used.
+However, this template is not identical to the predicted MC background in signal events.
+The difference is considered as one of our systematic uncertainties, obtained by replacing the nominal template by the simulated one.
+The resulting $\approx$0.01\% uncertainty in \Acpprime is the largest experimental uncertainty.
+
+\subsection{Theoretical systematic uncertainties}
+\subsubsection{Parton distribution function}
+As the minimal starting point, the symmhessian method~\cite{CMS:symmhessian} of the $NNPDF3.1$ set combining with two $\alpha_s$ variations is used.
+The uncertainty comes from the root of the quadrature of each eigenvector subtracted with the nominal weight.
+In addition, $\alpha_\text{s}$ uncertainties are considered by using \texttt{NNPDF31\_nlo\_as\_0117} and \texttt{NNPDF31\_nlo\_as\_0119} computed separately and added in quadrature.
+This results in one of the smallest contributions among all the sources of theoretical uncertainty with a value of $<$0.001\% in the final \Acpprime measurements.
+
+\subsubsection{QCD scale uncertainties}
+The impact of the QCD renormalization and factorization scales on the \ttbar simulation is obtained by changing them independently during the production of the simulated samples by a factor of 0.5 or 2.
+The two contributions where one scale is moved up while the other is changed down are excluded.
+The total uncertainty is estimated by taking the maximum deviation from the nominal result.
+The resulting uncertainties are $<$0.003\% to the final results.
+
+\subsubsection{ISR and FSR}
+The uncertainty from the modeling of the PS is obtained by changing the renormalization scale for initial- and final-state QCD radiation (ISR and FSR) up and down by a factor of 2 (for ISR) and $\sqrt{2}$ (for FSR).
+The resulting uncertainties are around 0.002 and 0.02\% for ISR and FSR, respectively.
+
+\subsubsection{Color Reconnection}
+The default MC simulation uses the multiple-parton interaction (MPI) scheme for color reconnection (CR) with early-resonance decays switched off in the \PYTHIA package.
+The uncertainty from this method is estimated using two other CR models within \PYTHIA, a gluon-move scheme and a QCD-inspired scheme~\cite{CMS:CR1,CMS:CR2}.
+The resulting systematic uncertainty associated with CR is $<$0.05\%.
+
+\subsubsection{ME-PS matching scale}
+The uncertainty in the matching scale between the ME and PS is derived by varying a damping parameter in \POWHEG.
+Its nominal value in simulation of $1.379\Mt$ is changed to $2.305\Mt$ and $0.8738\Mt$~\cite{Sim:CP5}.
+The resulting estimation of the systematic uncertainty in \Acpprime is $<$0.04\%.
+
+\subsubsection{Underlying event}
+The uncertainty from modeling of the UE is estimated by varying the CP5 tune in the \ttbar MC samples~\cite{Sim:CP5}.
+Among the theoretical uncertainties, this has the largest value of $\approx$0.06\% in the \Acpprime measurement.
+
+\subsubsection{Flavour response}
+The uncertainty coming from the jet response to gluons and \PQc, \PQb, and light quarks is estimated by varying separately the JES responses for each of the four jet flavors within their uncertainties.
+A systematic uncertainty of about 0.01\% in \Acpprime was found.
+
+\subsubsection{Simulated top mass variation}
+The top quark mass value in the simulation is varied by $\pm 1\GeV$ to estimate the uncertainty due to this parameter, leading to a value of $\approx$0.02\%.
+
+\subsubsection{Per event resolution}
+An average mass resolution for the reconstructed top quark and \PW boson invariant masses is used in the \chisq calculation.
+The actual event-by-event resolutions depend on the detector response within different $\eta$ and $\phi$ regions.
+With different detector responses, the measured mass resolutions of the reconstructed top quark and \PW boson masses change accordingly.
+However, the overall effects have a negligible impact compared to using the average resolution.
+To estimate the worst-case scenario, the top quark and \PW boson mass resolutions are scaled up and down by 10\% per event.
+The resulting uncertainty is $<$0.005\% in the final \Acpprime measurements.
+
+\subsubsection{W+HF enriched study}
+The fraction of \WHF events might be different in the background-enriched events than in the signal events because of the requirement of not having a \PQb-tagged jet.
+This would cause a misestimation of the background in the signal region.
+To estimate the effect of this possible bias, the \WHF events in the signal region are reweighted in the simulation by a factor of 10 in the signal region to raise the corresponding fraction.
+The systematic uncertainties are estimated by replacing the original \Wjets samples, which leads to an estimated systematic uncertainty of about 0.02\%.
+
+\subsubsection{Top \PT reweighting}
+This feature has been seen by both the ATLAS and CMS experiments in previous measurements~\cite{CMS:2016oae,ATLAS:2019hxz,Kidonakis:2012rm,Czakon:2015owf,Czakon:2017wor,Catani:2019hip}. 
+To correct for this, the simulated \PT spectrum in the nominal \ttbar samples is reweighted to match the measured distribution in data.
+To estimate the uncertainty in the \Acpprime measurement from this effect, the \PT reweighting is removed.
+A resulting uncertainty of $<$0.001\% is determined.
+
+From Table~\ref{tab:acp_uncertainties}, we see that the dominant sources of systematic uncertainty are from the ME-PS matching, the UE simulation, and the correction for the \WHF content.
