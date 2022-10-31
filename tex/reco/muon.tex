@@ -12,7 +12,7 @@ The muon reconstruction in the CMS experiment can be categorized into three diff
         The process begins with track seeding with the DT or CSC segments and then iterate with the KF technique to build the muon tracks.
     \item Tracker muon is made by extrapolating the tracks, with $\PT > 0.5 \GeV$ and a total momentum $p > 2.5 \GeV$, in the tracker system to the muon system with loosely mathcing to the DT or CSC segments.
         The inner track is considered as a tracker muon track if at least one muon segment matching with the extrapolated track.
-    \item Global muon is reconstructed by comparing the tracks from standalone muon with tracker system.
+    \item Global muon is built by comparing the tracks from standalone muon with tracker system.
         A combined fit is performed by the KF technique to construct a global muon track with information of both the standalone muon tracks and tracks from tracker system, if the parameters of those tracks are matched .
 \end{itemize}
 
@@ -42,7 +42,7 @@ The track provides sufficient information in the tracking system with itself bei
 In this analysis, we focus on muons originating directly from a hard scattering process instead of muons coming from secondary decay products of short-lived hadrons.
 Therefore, the muon track should be with a primary vertex and occupy all inner tracker system, rather than just a segment.
 
-The muon physics object group defines standard selection criteria for different levels of muon identification (ID) depending on the analysis needs.
+The muon physics object group defines standard selection criteria for different levels of muon identification (ID) depending on the analysis needs~\cite{CMS:mu_PF}.
 A tight muon is required to meet the following criteria:
 \begin{itemize}
     \item The candidate is reconstructed as a Global Muon with tracks fitting starting from the muon subdetectors.
@@ -61,7 +61,7 @@ A loose muon, on the other hand, is only required to meet the following criteria
     \item Identified by the particle flow algorithm as a muon 
 \end{itemize}
 
-In order to distinguish prompt muons from the \PW and \PZ bosons decay against those from heavy flavor decays within jets, a particle flow based relative isolation value, noted as $I_{\mathrm{pf,rel}}$, is computed by comparing the momentum of the muon track with the energy deposits in adjacent subsystems and defined as
+In order to distinguish prompt muons from the \PW and \PZ bosons decay against those from heavy flavor decays within jets, a particle flow based relative isolation value, noted as $I_{\mathrm{pf,rel}}$, is computed by comparing the momentum of the muon track with the energy deposits in adjacent subsystems~\cite{CMS:mu_PF} and defined as
 \begin{linenomath}\begin{equation}\label{eq:reco_muon_iso}
     I_{\mathrm{pf,rel}} = \frac{ \sum p_{\mathrm{T,chhad}} + \mathrm{max}(0, \sum E_{\mathrm{T,neuhad}}  +   \sum E_{\mathrm{T,}\gamma} -  0.5\sum p_{\mathrm{T,pileup}})     }{  p_{\mathrm{T,}\mu} }
 \end{equation}\end{linenomath}

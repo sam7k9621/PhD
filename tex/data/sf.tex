@@ -2,13 +2,13 @@ Due to the imperfection simulation process, there will always be discrepancies b
 Methods of correction including event weights and alternation of kinematic values can be applied to ensure the physics are well matched to the data.
 
 \subsection{Jet energy smearing}
-The width of the jet kinematic, called the resolution, is wider in data than in simulation.
+The width of the jet kinematic, called the resolution, is wider in data than in simulation~\cite{CMS:2016lmd}.
 The difference could be alleviated by scaling the reconstructed four momentum of simulated jets by some factor $c_{\mathrm{JER}}$, which is called the smearing.
 The scaling method for obtaining $c_{\mathrm{JER}}$ can be given as
 \begin{linenomath}\begin{equation}\label{eq:data_smear}
     c_{\mathrm{JER}} = 1 + (S_{\mathrm{JER}}-1)\biggl(\frac{\PT-\PT^{\mathrm{ptcl}}}{\PT}\biggr)
 \end{equation}\end{linenomath}
-where $(S_{\mathrm{JER}}$ represents the average ratio between the relative jet resolution measured in data and simulation, $\PT^{\mathrm{ptcl}}$ is the transverse momentum of the corresponding jet clustered from generator-level particles.
+where $(S_{\mathrm{JER}}$ represents the average ratio between the relative jet resolution measured in data and simulation and $\PT^{\mathrm{ptcl}}$ is the transverse momentum of the corresponding jet clustered from generator-level particles.
 The factor $c_{\mathrm{JER}}$ is truncated at zero, i.e. if it is negative, it is set to zero. 
 This method only works if a well-matched particle-level jet is present and a large shift in the jet energy might be applied otherwise.
 The requirements of well-matched are defined as
@@ -31,9 +31,12 @@ Most of the efficiency scale factors used in this analysis are provided by their
 The scale factors of electron trigger are studied independently and documented in Appendix~\ref{appendix:trigger}.
 The event-by-event weight of \PQb tagging algorithm is obtained with the scale factors and MC \PQb tagging efficiencies defined as
 \begin{linenomath}\begin{equation}\begin{aligned}\label{eq:data_btagsf}
+    w &= \frac{P(\mathrm{Data})}{P(\mathrm{MC})}
+\end{aligned}\end{equation}\end{linenomath}
+with 
+\begin{linenomath}\begin{equation}\begin{aligned}\label{eq:data_btageff}
     P(\mathrm{MC}) &= \prod_{\mathrm{i=tagged}} \epsilon_{i} \prod_{\mathrm{j=untagged}} (1-\epsilon_{j}) \\
     P(\mathrm{Data}) &= \prod_{\mathrm{i=tagged}} \mathrm{SF}_i\epsilon_{i} \prod_{\mathrm{j=untagged}} (1-\mathrm{SF}_j\epsilon_{j}) \\
-    w &= \frac{P(\mathrm{Data})}{P(\mathrm{MC})}
 \end{aligned}\end{equation}\end{linenomath}
 where $w$ is the event weight, $\epsilon$ is the MC \PQb tagging efficiency, and SF is the scaling factor of \PQb tagging algorithm as a function of jet flavor, jet \PT, and jet $\eta$. 
 The goal of this method is to predict the correct event yield in data by only changing the weight of the selected MC events, i.e., MC events that did not pass the selection do not need to be added back.

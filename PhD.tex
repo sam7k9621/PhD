@@ -35,7 +35,7 @@
     filecolor  =magenta,
     citecolor  =blue,
     urlcolor   =blue,
-    pdftitle   ={PhDThesis},
+    pdftitle   ={Dissertation},
     pdfauthor  ={Pu Sheng Chen}
 %    pdfpagemode=FullScreen,
     }
@@ -108,16 +108,37 @@
 \usepackage{sidecap} % side caption
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%% Reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{biblatex}
-\addbibresource{PhDThesis.bib}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{sty/hepparticles}
 \usepackage{sty/heppennames2}
 \usepackage{sty/ptdr-definitions}
+\usepackage{CJKutf8}
 
+%%%%%%%%%% Reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{biblatex}
+\addbibresource{PhD.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\begin{sloppypar}
+\includepdf[pages=-]{title.pdf}
+
+\begin{CJK*}{UTF8}{bkai}
+\chapter*{致謝}
+\clearpage
+\chapter*{摘要}
+此論文透過頂夸克對的半輕子衰變態尋找電荷宇稱破壞。此測量使用從2016年到2018年，藉由緊湊緲子線圈收集的質心能量十三兆電子伏特的質子對撞事件，其總和亮度達到一百三十七逆飛靶。此分析方法使用線性獨立的終態粒子的四維動量所建立的可觀測量來測量可能的宇稱破壞。藉由觀測到的不對稱量所測量到的無因次色電偶極矩量為$0.04\pm 0.10\stat\pm 0.07\syst$，此結果顯示沒有電荷宇稱破壞的徵兆，並吻合標準模型的預測。
+
+\noindent 關鍵字：大型強子對撞機、緊湊緲子線圈、標準模型、電荷宇稱破壞、頂夸克對
+\clearpage
+\end{CJK*}
+\chapter*{Abstract}
+Results are presented on a search for CP violation in the production and decay of top quark-antiquark pairs in the lepton+jets channel.
+The search is based on data from proton-proton collisions at \newTeV, collected with the CMS detector, corresponding to an integrated luminosity of 138\fbinv. 
+Possible CP violation effects are evaluated by measuring asymmetries in observables constructed from linearly independent four-momentum vectors of the final-state particles. 
+The dimensionless chromoelectric dipole moment of the top quark obtained from the observed asymmetries is measured to be $0.04\pm 0.10\stat\pm 0.07\syst$, and the asymmetries exhibit no evidence for CP-violating effects, consistent with expectations from the standard model.
+
+\noindent\textbf{Keywords}: LHC, CMS, Standard model, CP violation, \ttbar
+\clearpage
 
 \tableofcontents
 \raggedbottom
@@ -183,4 +204,5 @@
     \input{tex/appendix/df.tex}
 
 \printbibliography[heading=bibintoc]
+\end{sloppypar}
 \end{document}

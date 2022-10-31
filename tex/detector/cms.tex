@@ -1,4 +1,4 @@
-The CMS detector, with a very large angular coverage around the interaction points except for the two ends of the beam line, is designed to be a general purpose particle detector.
+The CMS detector~\cite{Chatrchyan:1129810}, with a very large angular coverage around the interaction points except for the two ends of the beam line, is designed to be a general purpose particle detector.
 The CMS detector is composed of solenoid magnet and steel yokes weighting 14,000 tonne, using almost twice much iron as the Eiffel Tower.
 The main goal is to detect and measure precise momentum and energy of all stable particles emitting from the proton-proton collisions.
 
@@ -77,7 +77,7 @@ Though it would be ideal to have full 2D information for each module, it would b
 \end{figure}
 
 The pixel detectors are situated closest to the interaction point and can be separated into two parts, one is composed of three barrel layers (BPix) and the other one is with two endcap disks (FPix).
-The layout of the pixel detectors has been modified since the phase-1 upgrade in 2017 into four layers in the barrel part and six disks in the endcap part, as shown in Fig.~\ref{fig:cms_pixel}.
+The layout of the pixel detectors has been modified since the phase-1 upgrade in 2017~\cite{CMSTrackerGroup:2020edz} into four layers in the barrel part and six disks in the endcap part, as shown in Fig.~\ref{fig:cms_pixel}.
 The original design can provides 3 tracking points, after the upgrade, the arrangement can further offer 4 tracking points even in high pileup environment.
 The BPix having a radial distance of 2.9, 6.8, 10.9, 16.0 cm from the interation points provide high resolution starting points for the algorithm to reconstruct the particle trajectories.
 The FPix situated at $|z|$ positions 30.9, 33.8 38.4, 41.3 47.9, 50.8 cm, covering 6.5 cm of radial distance from the beam axis, giving the pixel modules and angular coverage up to $|\eta|<2.5$ around the interaction point.
@@ -95,7 +95,7 @@ It contains two barrel part occupying a radial coverage from 25.5 to 108.0 cm ov
 There are 9.6 million $p^+$ strips implanted into n-type bulks with 320 $\mu$m thickness inside the strip tracker.
 The positive voltage is connected with the n-type backplane of the bulk to produce a reverse bias voltage between the backplane and $p^+$ strip.
 
-\subsection{Electromagnetic calorimeter}
+\subsection{Electromagnetic calorimeter (ECAL)}
 The ECAL detector mounted outside the tracker system is designed to measure the electromagnetic deposit energy of photons and electrons under strong magnetic field.
 It is composed of 75 848 homogeneous lead tungstate (PbWO$_4$) crystals with photodetectors, as shown in Fig.~\ref{fig:cms_crystal}.
 The photodetectors can capture the signal when the charged particles pass through and excite the crystal atoms, subsequently releasing the excitation energy in narrow frequency photon shower.
@@ -131,7 +131,7 @@ These regions are known to have poor resolution in particle reconstruction, and 
 During the data collection, the photodetectors, the avalanche photodiodes (APDs) in the EB and vacuum phototriodes (VPTs) in the EE, collect the scintillation light produced from crystals with energy deposited. 
 Next, the electronic signals from the photodetectors are amplified by the multi-gain pre-amplifier, which provides three simultaneous analogue outputs digitized at 40 MHz by a 12-bit analog-to-digital converter (ADC).
 These digitized and filtered signals are then transmitted to off-detector with Level-1 trigger for further management.
-The ECAL performance, the barrel energy resolution, can be measured from an electron test beam experiment and decoupled into three terms as
+The ECAL performance, the barrel energy resolution~\cite{Adzic:2007mi}, can be measured from an electron test beam experiment and decoupled into three terms as
 \begin{linenomath}\begin{equation}\label{eq:cms_ecal}
     \frac{\sigma_E}{E} = \frac{2.8\%}{\sqrt{E(\GeV)}} \bigoplus \frac{12\%}{E(\GeV)} \bigoplus 0.3\%
 \end{equation}\end{linenomath}
@@ -140,7 +140,7 @@ The first term of the equation is the stochastic term coming from shower contain
 The middle term is the noise term contributed by the photodetector electronics.
 The last one, the constant term, dominating in high energy photon and electron showers, depends on non-uniformity of the longitudinal light collection, energy leakage from the back of the calorimeter, single-channel response uniformity and stability.
 
-\subsection{Hadronic calorimeter}
+\subsection{Hadronic calorimeter (HCAL)}
 The HCAL detector situated outside the ECAL aims to measure the energy of the hadrons and indirectly estimation of the presence of neutrinos.
 It is in charge of the reconstruction of the jets originating from quark and gluon fragmentation and hadronization, and is designed as an array of sampling detectors, which strips the energy of the incoming particles with an absorber producing a shower of lower-energy secondary particles.
 The scintillating materials then absorb those secondary particles for energy measurements.
@@ -163,7 +163,7 @@ The HCAL operates when a hadron particle passes through successive layers of abs
 The blue-violet light emitted by these secondary particles passing through the alternating layers of active scintillation is collected by optical wavelength-shifting fibers and shifted into green light.
 A green optic signal is then sent by the normal optic cables to the front-end electronics where the optical signal is transformed into fast electronic signals by hybrid photodiodes (HPDs).
 The signals are finally sent to data acquisition system for event triggering.
-The energy resolution of the combined calorimeter (ECAL and HCAL) can be measured from a test beam experiment as
+The energy resolution of the combined calorimeter (ECAL and HCAL) can be measured from a test beam experiment~\cite{USCMS:2009fxn} as
 \begin{linenomath}\begin{equation}\label{eq:cms_resol}
     \frac{\sigma_E}{E} = \frac{84.7\%}{\sqrt{E(\GeV)}} \bigoplus \bigoplus 7.4\%
 \end{equation}\end{linenomath}
@@ -198,7 +198,7 @@ A complete distribution of the magnetic field strength for the magnet is shown i
 Due to the high mass of muons compared with the electrons, the bremsstrahlung radiation is relatively small, and thus muons are expected to penetrate all detector material in the calorimeter system.
 Given this unique property, muons are expected to be one of the clearest signature for high energy events.
 Precision measurements of muons outside the existing detectors is performed by muon detectors situated outside the outer HCAL system and the solenoid magnet.
-A gas-chamber type of detector is designed to reconstruct the muon information with the angular coverage of $|\eta| < 2.4$.
+A gas-chamber type of detector~\cite{CMS:mu_PF} is designed to reconstruct the muon information with the angular coverage of $|\eta| < 2.4$.
 The muon detectors are composed of three different gas ionization chambers, the drift tube chambers (DT), cathode strip chambers (CSC), and the resistive plate chambers (RPC), as shown in Fig.~\ref{fig:cms_muon}.
 All the different muon systems share the same sensor operating principle.
 The anode and cathode maintained at high voltage differences are interleaved with an inert gas.

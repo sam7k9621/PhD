@@ -8,8 +8,8 @@ The individual hits on the detectors are fitted to an expected track of a partic
 The sensor elements are triggered when the particles pass the detector modules at certain angle, and the clusters of neighboring sensor elements are joined together as hits.
 
 The weighted average of sensor component coordinates in a cluster can determine the spacial position of hits, which would be further corrected with the incidence angle and corresponding energy deposits when the track is reconstructed.
-A dedicated tracking software called the combinatorial track finding (CTF) algorithm which runs several iterations of combinatorial Kalman filter integrating patter recognition and track fitting.
-Each tracking iteration is composed of four steps: track seeding, trajectory building, ambiguity resolving, and track fitting.
+A dedicated tracking software called the combinatorial track finding (CTF) algorithm which runs several iterations of combinatorial Kalman filter~\cite{Fruhwirth:1987fm} integrating patter recognition and track fitting.
+Each tracking iteration is composed of four steps: track seeding, trajectory building, ambiguity resolving, and track fitting~\cite{CMS:2014pgm}.
 Figure~\ref{fig:reco_track} shows the tracking efficiency achieves $98\%$ in the CMS experiment.
 
 \begin{figure}\centering
@@ -23,11 +23,11 @@ Figure~\ref{fig:reco_track} shows the tracking efficiency achieves $98\%$ in the
     \label{fig:reco_track}
 \end{figure}
 
-Track seeding sets the initial trajectory parameters and their uncertainties in the beginning of the reconstruction of a track.
+\textbf{Track seeding} sets the initial trajectory parameters and their uncertainties in the beginning of the reconstruction of a track.
 Iconic signatures, for example, the good hits in the pixel detector with close spacial proximity and orientation towards the interaction point are used in the first iterations to give a good estimation of the particle track.
 Looser criteria are used in the following iterations to ensure particles decaying in flight in the tracking system is also reconstructed
 
-Trajectory building is commonly referred as the KF process, updating the trajectory parameters at each layer.
+\textbf{Trajectory building} is commonly referred as the KF process, updating the trajectory parameters at each layer.
 It is done by propagating the existing trajectory to the next layer, choosing a hit within a certain neighborhood, and correcting the trajectory parameters from a $\chi^2$ fit.
 Multiple additional trajectory candidates are generated when multiple candidate hits exist.
 An invalid hit can be an additional information if a particle passes through a detector module without leaving any readout signal, and can be added into the list of hits in the trajectory candidate to indicate where a hit was expected to be.
@@ -37,10 +37,10 @@ The process can then restart with a new set of track seeds made with looser seed
 The CMS performs 5 iterations of the track building with progressively looser criteria for seeding in each iteration for the standard track reconstruction.
 This allows particles originating from in-flight decays with as little as 3 hits be constructed.
 
-Ambiguity resolving is then needed to avoid track double counting caused by the multiple trajectory candidates created at each propagation in the trajectory building algorithm.
+\textbf{Ambiguity resolving} is then needed to avoid track double counting caused by the multiple trajectory candidates created at each propagation in the trajectory building algorithm.
 The track with the larger $\chi^2$ values will be discarded as a duplicate between two track candidate with the fraction of shared hits is greater than $50\%$.
 
-Track fitting reruns the track fitting on the hits among track candidates to reduce biases introduced by the seed selections, and also update the hit information with now-available track information.
+\textbf{Track fitting} reruns the track fitting on the hits among track candidates to reduce biases introduced by the seed selections, and also update the hit information with now-available track information.
 
 \subsection{Vertex}
 Vertexing algorithm plays an important role in indicating the physics interaction point by finding the point where trajectories meet.
@@ -54,7 +54,7 @@ The results of a $\chi^2$ fit of a vertex position can be done by minimizing a f
 \end{equation}\end{linenomath}
 where $i$ runs over the indexes of tracks, $d_i(\vec{v})$ is the distance of the vertex position from track $i$, and $\sigma_i$ is the uncertainty in the distance.
 However, poorly associated tracks contribute large $\chi^2$ values in this method.
-The adaptive vertex fitter sequentially suppresses potentially outlying tacks instead by an additional weighting function:
+The adaptive vertex fitter~\cite{Fruhwirth:2007hz} sequentially suppresses potentially outlying tacks instead by an additional weighting function:
 \begin{linenomath}\begin{equation}\label{eq:reco_weight}
     w(\chi^2) = \frac{\mathrm{exp}(-\chi^2/2T)}{\mathrm{exp}(-\chi^2/2T)+\mathrm{exp}(-\chi^2_c/2T)}
 \end{equation}\end{linenomath}
